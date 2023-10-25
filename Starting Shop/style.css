@@ -1,0 +1,36 @@
+.counter{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+counterPart img{
+    margin-left: 26.5px;
+}
+counterPart button{
+    margin-left: 26.5px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+
+    width: 3px;
+    height: 3px;
+    padding: 0;
+    background: black;
+    
+    border: none;
+    font-size: 10px;
+    cursor: pointer;
+    
+}
+counterPart button img{
+    margin-left: 0;
+    padding: 0;
+}
+
+counterPart a{
+    margin-left: 40px;
+    font-size: 20px;
+    font-style: bold;
+}
+.numOfItems{
+
+}

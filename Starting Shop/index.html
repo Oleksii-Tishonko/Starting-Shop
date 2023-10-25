@@ -1,12 +1,59 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="styles.css"/>
-
+    <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 <body>
-    <h1>Basic website!</h1>
+    <h1>Basic shop</h1>
     <p>Project about shop</p>
+    <h3>Chapter: Counter project</h3>
+    <!-- <img src="Icons/590682.png"/> -->
+    <br/>
+    <ul class="counter">
+        <li class="counterObject">
+        <img src="Icons/Products/2554936.png" width = "100px" height="100px"/>
+        <br/>
+        <counterPart>
+            <button onclick="increaseCounter(1)"><img src="Icons/Arrow/arrow up.png" width="47px" height="47px"/></button>
+            
+            <br/>
+            <a class="numOfItems" id="1">15</a>
+            <br/>
+            <button onclick="decreaseCounter(1)"><img src="Icons/Arrow/arrow down.png" width="47px" height="47px"/></button>
+        </counterPart>
+        </li>
+
+        <li class="counterObject">
+        <img src="Icons/Products/4477610.png" width = "100px" height="100px"/>
+        <br/>
+        <counterPart>
+            <button onclick="increaseCounter(2)"><img src="Icons/Arrow/arrow up.png" width="47px" height="47px"/></button>
+            
+            <br/>
+            <a class="numOfItems" id="2">10</a>
+            <br/>
+            <button onclick="decreaseCounter(2)"><img src="Icons/Arrow/arrow down.png" width="47px" height="47px"/></button>
+        </counterPart>
+        </li>
+
+        <li class="counterObject">
+        <img src="Icons/Products/590682.png" width = "100px" height="100px"/>
+        <br/>
+        <counterPart>
+            <button onclick="increaseCounter(3)"><img src="Icons/Arrow/arrow up.png" width="47px" height="47px"/></button>
+            
+            <br/>
+            <a class="numOfItems" id="3">10</a>
+            <br/>
+            <button onclick="decreaseCounter(3)"><img src="Icons/Arrow/arrow down.png" width="47px" height="47px"/></button>
+        </counterPart>
+        </li>
+        
+    </ul>
+
+
+<script src="script.js"></script>
 </body>
+
 
 </html>
