@@ -14,7 +14,8 @@ counterPart button{
     width: 3px;
     height: 3px;
     padding: 0;
-    background: black;
+    /* background: black; */
+    background: none;
     
     border: none;
     font-size: 10px;
