@@ -35,3 +35,20 @@ exports.getImage = async (req, res) =>{
   // res.end(photo);
   // response.body.pipe(photo);
 }
+
+exports.getProduct = async (req, res) =>{
+  productId = req.params.id;
+
+  dataPath = `${__dirname}/../public/products/data.json`;
+  dataPath = path.normalize(dataPath, 'utf-8');
+
+  const data = JSON.parse(fs.readFileSync(dataPath));
+  const product = data.find(obj => obj._id === productId)
+  
+  res.json({
+    status: 200,
+    data:{
+      product: product,
+    }
+  })
+}

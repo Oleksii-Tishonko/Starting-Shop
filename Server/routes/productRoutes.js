@@ -11,4 +11,8 @@ router
     .route('/photo/:id')
     .get(productsController.getImage);
 
+router
+    .route('/:id')
+    .get(productsController.getProduct);
+
 module.exports = router;

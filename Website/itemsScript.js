@@ -1,3 +1,4 @@
+import { Item } from './Item.js';
 // const itemEl =
 //     `<div class="item">
 //         <img src = "carrot.png" id="itemImage" width="150px"></img>
@@ -14,55 +15,55 @@ const itemList = document.querySelector('.itemList');
 
 
 
-class Item{
-    get itemPattern(){return `
-    <div class="item">
-        <img src = "carrot.png" id="itemImage" width="150px"></img>
-        <div class= "itemName">Carrot</div>
-        <button class="openItem">Open</button>
-    </div>`};
-    set itemPattern(value){
-        throw Error(`Trying to set a new value to the constant itemPattern, value: "${value}".`);
-    };
+// export class Item{
+//     get itemPattern(){return `
+//     <div class="item">
+//         <img src = "carrot.png" id="itemImage" width="150px"></img>
+//         <div class= "itemName">Carrot</div>
+//         <button class="openItem">Open</button>
+//     </div>`};
+//     set itemPattern(value){
+//         throw Error(`Trying to set a new value to the constant itemPattern, value: "${value}".`);
+//     };
 
-    element;
+//     element;
 
-    constructor(itemData){
-        this.element = this.createItem();
+//     constructor(itemData){
+//         this.element = this.createItem();
 
-        if(!itemData) return;
-        this.setItemData(itemData)
-    }
+//         if(!itemData) return;
+//         this.setItemData(itemData)
+//     }
 
-    setItemData(itemData){
-        this.setName(itemData.name);
-        console.log(itemData.photoId);
-        console.log(`http://localhost:3006/api/v1/products/photo/${itemData.photoId}`);
-        this.setImage(`http://localhost:3006/api/v1/products/photo/${itemData.photoId}`);
-    }
-    setName(name){
-        const nameField = this.element.querySelector('.itemName');
-        nameField.textContent = name;
-    }
+//     setItemData(itemData){
+//         this.setName(itemData.name);
+//         console.log(itemData.photoId);
+//         console.log(`http://localhost:3006/api/v1/products/photo/${itemData.photoId}`);
+//         this.setImage(`http://localhost:3006/api/v1/products/photo/${itemData.photoId}`);
+//     }
+//     setName(name){
+//         const nameField = this.element.querySelector('.itemName');
+//         nameField.textContent = name;
+//     }
 
-    setImage(url){
-        const image = this.element.querySelector('#itemImage');
-        image.src = url;
-    }
+//     setImage(url){
+//         const image = this.element.querySelector('#itemImage');
+//         image.src = url;
+//     }
 
-    createItem(){
-        let el = document.createElement('div');
-        el.innerHTML = this.itemPattern;
-        return el;
-    }
+//     createItem(){
+//         let el = document.createElement('div');
+//         el.innerHTML = this.itemPattern;
+//         return el;
+//     }
 
-    // createItem(itemData){
-    //     el = createItem();
-    //     setItem(el, itemData);
+//     // createItem(itemData){
+//     //     el = createItem();
+//     //     setItem(el, itemData);
 
-    //     return el;
-    // }
-}
+//     //     return el;
+//     // }
+// }
 
 
 
@@ -97,8 +98,8 @@ async function getImageFromServer(callback){
     const respose = await fetch(url);
     let dataJson = await respose.json();
     console.log(dataJson);
-    data = dataJson.data.productsData;
-    products = JSON.parse(JSON.stringify(data));
+    let data = dataJson.data.productsData;
+    let products = JSON.parse(JSON.stringify(data));
 
     callback(products);
 }
