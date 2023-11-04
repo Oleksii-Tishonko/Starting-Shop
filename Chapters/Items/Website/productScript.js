@@ -18,7 +18,30 @@ function loadProductDataToPage(data){
   let image = document.querySelector('.productImage');
   image.src = `http://localhost:3006/api/v1/products/photo/${data.photoId}`;
   
+  let specs = data.specs;
+  let listOfSpecsElement = document.querySelector('.listOfSpecs');
+  let specsProperties = Object.keys(specs);
+  
+  console.log(specs);
 
+  for(let i = 0; i < specsProperties.length; i++){
+    let specName = specsProperties[i];
+    let specValue = specs[specName];
+
+    let specElement = createSpecsElement(specName, specValue);
+    listOfSpecsElement.appendChild(specElement);
+  }
+
+}
+
+function createSpecsElement(name, value){
+  let el = document.createElement('tr')
+  el.innerHTML = `
+    <th>${name}</th>
+    <td>${value}</td>`
+
+  return el;
+    
 }
 
 function getParameterByName(name, url) {
