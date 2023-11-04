@@ -1,0 +1,45 @@
+#mainHeader{
+
+}
+.aboutProduct{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.aboutProductRight{
+    text-align: right;
+    margin-left: auto;
+}
+
+.productName{
+    font-size: 20pt;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+th,td {
+  border: 1px solid rgb(197, 197, 197);
+  text-align: center;
+  padding: 10px;
+}
+table {
+  border-collapse: collapse;
+}
+
+.specs{
+    margin: 10px;
+}
+
+.specs table{
+    margin: 10px;
+    
+}
+.specs table th{
+    width: 100px
+}
+
+.specs table td{
+    width: 250px
+}
+.specs #header{
+    font-size: 18pt;
+    text-align: center;
+}
